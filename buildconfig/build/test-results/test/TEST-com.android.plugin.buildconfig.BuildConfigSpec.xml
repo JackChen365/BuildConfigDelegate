@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.android.plugin.buildconfig.BuildConfigSpec" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-10-04T04:21:25" hostname="CZ" time="43.795">
+  <properties/>
+  <testcase name="test build config" classname="com.android.plugin.buildconfig.BuildConfigSpec" time="43.795"/>
+  <system-out><![CDATA[> Task :app:preBuild UP-TO-DATE
+> Task :app:preAndroidDevDebugBuild UP-TO-DATE
+> Task :library:preBuild UP-TO-DATE
+> Task :library:preAndroidDevDebugBuild UP-TO-DATE
+> Task :library:compileAndroidDevDebugAidl NO-SOURCE
+> Task :app:compileAndroidDevDebugAidl NO-SOURCE
+> Task :library:packageAndroidDevDebugRenderscript NO-SOURCE
+> Task :app:compileAndroidDevDebugRenderscript NO-SOURCE
+
+> Task :app:collectAndroidDevDebugDebugBuildConfig
+Project:app variantName:androidDev BuildConfigDir:/Users/zhenchen/Documents/Android/BuildConfigDelegate/buildconfig/build/tmp/junit8174313777998267759/build/tmp/buildconfig
+
+> Task :app:generateAndroidDevDebugBuildConfig
+> Task :app:generateAndroidDevDebugResValues
+> Task :app:generateAndroidDevDebugResources
+> Task :library:compileAndroidDevDebugRenderscript NO-SOURCE
+> Task :library:generateAndroidDevDebugResValues
+> Task :library:generateAndroidDevDebugResources
+> Task :library:packageAndroidDevDebugResources
+> Task :app:createAndroidDevDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksAndroidDevDebug
+> Task :library:extractDeepLinksAndroidDevDebug
+
+> Task :library:collectAndroidDevDebugDebugBuildConfig
+Project:library variantName:androidDev BuildConfigDir:/Users/zhenchen/Documents/Android/BuildConfigDelegate/buildconfig/build/tmp/junit8174313777998267759/build/tmp/buildconfig
+
+> Task :library:generateAndroidDevDebugBuildConfig
+> Task :app:mergeAndroidDevDebugResources
+> Task :app:generateAndroidDevDebugBuildConfigDelegate
+> Task :app:mergeAndroidDevDebugShaders
+> Task :app:compileAndroidDevDebugShaders NO-SOURCE
+> Task :app:generateAndroidDevDebugAssets UP-TO-DATE
+> Task :library:mergeAndroidDevDebugShaders
+> Task :library:compileAndroidDevDebugShaders NO-SOURCE
+> Task :library:generateAndroidDevDebugAssets UP-TO-DATE
+> Task :library:packageAndroidDevDebugAssets
+> Task :app:mergeAndroidDevDebugAssets
+> Task :app:processAndroidDevDebugJavaRes NO-SOURCE
+> Task :library:processAndroidDevDebugJavaRes NO-SOURCE
+> Task :library:bundleLibResAndroidDevDebug NO-SOURCE
+> Task :app:checkAndroidDevDebugDuplicateClasses
+> Task :app:mergeAndroidDevDebugJniLibFolders
+> Task :library:mergeAndroidDevDebugJniLibFolders
+> Task :library:compileAndroidDevDebugLibraryResources
+> Task :app:validateSigningAndroidDevDebug
+> Task :library:javaPreCompileAndroidDevDebug
+> Task :app:javaPreCompileAndroidDevDebug
+> Task :library:parseAndroidDevDebugLocalResources
+> Task :library:processAndroidDevDebugManifest
+> Task :app:processAndroidDevDebugManifest
+> Task :library:mergeAndroidDevDebugNativeLibs
+> Task :library:stripAndroidDevDebugDebugSymbols NO-SOURCE
+> Task :library:copyAndroidDevDebugJniLibsProjectOnly
+> Task :library:generateAndroidDevDebugRFile
+> Task :app:processAndroidDevDebugResources
+> Task :library:compileAndroidDevDebugJavaWithJavac
+> Task :app:mergeAndroidDevDebugNativeLibs
+> Task :app:stripAndroidDevDebugDebugSymbols NO-SOURCE
+> Task :library:bundleLibCompileToJarAndroidDevDebug
+> Task :app:compileAndroidDevDebugKotlin
+> Task :app:compileAndroidDevDebugJavaWithJavac
+> Task :app:compileAndroidDevDebugSources
+> Task :library:bundleLibRuntimeToJarAndroidDevDebug
+
+> Task :app:transformClassesWithBuildConfigDelegateForAndroidDevDebug
+	`BuildConfig#library#com.tubitv`
+	`BuildConfig#library#com.tubitv`
+	`BuildConfig#library#com.tubitv`
+	`BuildConfig#library#https://analytics-ingestion.staging-public.tubi.io/`
+	`BuildConfig#library#https://ott-androidtv.tubitv.com`
+
+> Task :app:dexBuilderAndroidDevDebug
+> Task :app:mergeAndroidDevDebugJavaResource
+> Task :app:mergeLibDexAndroidDevDebug
+> Task :app:mergeProjectDexAndroidDevDebug
+> Task :app:mergeExtDexAndroidDevDebug
+> Task :app:packageAndroidDevDebug
+> Task :app:assembleAndroidDevDebug
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 7.0.
+Use '--warning-mode all' to show the individual deprecation warnings.
+See https://docs.gradle.org/6.7.1/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD SUCCESSFUL in 42s
+43 actionable tasks: 43 executed
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

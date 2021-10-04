@@ -1,0 +1,32 @@
+allprojects { project ->
+    project.plugins.withId("java-gradle-plugin") {
+        task publishPlugin(type: Copy, group: "plugin development") {
+            from("build/libs") {
+                include "*.jar"
+            }
+            into rootDir.absolutePath + "/libs"
+            dependsOn "jar"
+        }
+        def testTask = project.tasks.findByName("test")
+        testTask.dependsOn "publishPlugin"
+    }
+    project.plugins.withId("com.android.application") {
+        fileTree(dir: "libs", include: "*.jar").each { jarFile ->
+            zipTree(jarFile).each { file ->
+                if (file.name.endsWith("properties")) {
+                    Properties props = new Properties()
+                    if (file.canRead()) {
+                        props.load(new FileInputStream(file))
+                        if (props != null && props.containsKey('implementation-class')) {
+                            //This is a plugin config file. The name without surfix is the plugin id.
+                            String pluginId = file.name.replace(".properties", "")
+                            //Apply the plugin for this project.
+                            println("apply plugin:$pluginId from plugin libs.")
+                            project.plugins.apply(pluginId)
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

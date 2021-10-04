@@ -1,0 +1,3 @@
+rootProject.name = "BuildConfigDelegate"
+include ':app'
+include ':buildconfig'

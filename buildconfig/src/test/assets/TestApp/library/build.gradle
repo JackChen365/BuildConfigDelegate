@@ -1,0 +1,55 @@
+plugins {
+    id 'com.android.library'
+}
+
+android {
+    compileSdkVersion 30
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    defaultConfig {
+        buildConfigField "String", "WEB_HELP_CENTER", "\"https://helpcenter.help.com\""
+    }
+    flavorDimensions "regular"
+    productFlavors {
+        android {
+            buildConfigField "String", "SERVER_URL", "\"https://android.com\""
+            buildConfigField "String", "FOR_OS", "\"Android\""
+        }
+        androidDev {
+            buildConfigField "String", "SERVER_URL", "\"https://android-dev.com\""
+            buildConfigField "String", "FOR_OS", "\"Android\""
+        }
+        androidStaging {
+            buildConfigField "String", "SERVER_URL", "\"https://android-staging.com\""
+            buildConfigField "String", "FOR_OS", "\"Android\""
+        }
+        androidTVStaging {
+            buildConfigField "String", "SERVER_URL", "\"https://android-tv-staging.com\""
+            buildConfigField "String", "FOR_OS", "\"Android\""
+        }
+        samsung {
+            buildConfigField "String", "SERVER_URL", "\"https://android-tv-staging.com\""
+            buildConfigField "String", "FOR_OS", "\"samsung\""
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'com.google.android.material:material:1.4.0'
+}

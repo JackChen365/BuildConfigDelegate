@@ -1,0 +1,10 @@
+com/android/plugin/buildconfig/task/BuildConfigDelegateGenerator.java
+ com.android.plugin.buildconfig.task.BuildConfigDelegateGenerator
+com/android/plugin/buildconfig/visitor/StringReplaceClassInvitor.java
+ com.android.plugin.buildconfig.visitor.StringReplaceClassInvitor
+com/android/plugin/buildconfig/visitor/StringReplaceStaticInitMethodCreator.java
+ com.android.plugin.buildconfig.visitor.StringReplaceStaticInitMethodCreator
+com/android/plugin/buildconfig/BuildConfigConstants.java
+ com.android.plugin.buildconfig.BuildConfigConstants
+com/android/plugin/buildconfig/visitor/StringReplaceMethodVisitor.java
+ com.android.plugin.buildconfig.visitor.StringReplaceMethodVisitor

@@ -1,0 +1,77 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+}
+
+android {
+    compileSdkVersion 30
+
+    defaultConfig {
+        applicationId "com.android.buildconfig.delegate.sample"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+
+    defaultConfig {
+        buildConfigField "String", "WEB_HELP_CENTER", "\"https://helpcenter.help.com\""
+    }
+    flavorDimensions "regular"
+    productFlavors {
+        android {
+            applicationId "com.android.app"
+            buildConfigField "String", "SERVER_URL", "\"https://android.com\""
+            buildConfigField "String", "FLAVOR_NAME", "\"android\""
+        }
+        androidDev {
+            applicationId "com.android.dev.app"
+            buildConfigField "String", "SERVER_URL", "\"https://android-dev.com\""
+            buildConfigField "String", "FLAVOR_NAME", "\"androidDev\""
+        }
+        androidStaging {
+            applicationId "com.android.staging.app"
+            buildConfigField "String", "SERVER_URL", "\"https://android-staging.com\""
+            buildConfigField "String", "FLAVOR_NAME", "\"androidStaging\""
+        }
+        androidTVStaging {
+            applicationId "com.android.tv.staging.app"
+            buildConfigField "String", "SERVER_URL", "\"https://android-tv-staging.com\""
+            buildConfigField "String", "FLAVOR_NAME", "\"androidTVStaging\""
+        }
+        samsung {
+            applicationId "com.android.samsung.app"
+            buildConfigField "String", "SERVER_URL", "\"https://android-tv-staging.com\""
+            buildConfigField "String", "FLAVOR_NAME", "\"samsung\""
+        }
+    }
+}
+
+dependencies {
+    implementation deps.kotlin.stdlib
+    implementation deps.core_ktx
+    implementation deps.app_compat
+    implementation deps.constraint_layout
+    implementation deps.material
+    implementation deps.recyclerview_selection
+    testImplementation deps.junit
+}
