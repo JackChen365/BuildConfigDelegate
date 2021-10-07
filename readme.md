@@ -72,11 +72,11 @@ SERVER_URL=http://www.server.com-> `BuildConfig#(app/library)http://www.server.c
 3. Generate a delegate class for the BuildConfig.
 
 ```
-private static final String SERVER_URL = Build.SERVER_URL -> 
+private static final String SERVER_URL = BuildConfig.SERVER_URL -> 
 private static final String SERVER_URL = BuildConfigDelegate.getString("app/library/...","SERVER_URL","default value")
 
 
-private static final String TEST_TEXT = "This is server:"+Build.SERVER_URL+" and this is the token:"+Build.ACCESS_TOKEN; ->
+private static final String TEST_TEXT = "This is server:"+BuildConfig.SERVER_URL+" and this is the token:"+BuildConfig.ACCESS_TOKEN; ->
 private static final String TEST_TEXT = new StringBuilder().append("This is server:")
                             .append(BuildConfigDelegate.getString("library","SERVER_URL","default value")
                             .append(" and this is the token:")
